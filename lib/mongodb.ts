@@ -1,7 +1,4 @@
 /* import { MongoClient } from "mongodb";
-
-const encodedPassword = encodeURIComponent("Go2F3xo0TUGTwlw");
-const uri = `mongodb+srv://koba1:${encodedPassword}@secretchatapp.dz2hq.mongodb.net/?authSource=secretchatapp&retryWrites=true&w=majority`; //process.env.MONGODB_URI!;
 /* const client = new MongoClient(uri);
 await client.connect();
 console.log("Connected!");
