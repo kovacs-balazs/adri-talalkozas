@@ -2,11 +2,6 @@ import clientPromise from "@/lib/mongodb";
 
 export async function POST(req: Request) {
     try {
-        // Debug: ellenőrizd az env variable-t
-        console.log("MONGODB_URI exists:", !!process.env.MONGODB_URI);
-        console.log("MONGODB_URI length:", process.env.MONGODB_URI?.length);
-        console.log("MONGODB_URI starts with:", process.env.MONGODB_URI?.substring(0, 30));
-        
         const body = await req.json();
         const { day, time } = body;
 
