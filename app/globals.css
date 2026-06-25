@@ -19,8 +19,70 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
+/* #root {
+  height: 100%;
+  background: #f472b6; /* pink-400 */
+
 body {
-  background: var(--background);
+  /* background: #f472b6; /* pink-400 - ugyanaz mint a main */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  /* TÁVOLÍTSD EL ezt: padding-bottom: env(safe-area-inset-bottom); */
+  overflow-x: hidden;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.heart {
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+  z-index: 15;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+/* #root {
+  background: #f472b6;
+} */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+.page {
+  min-height: 100dvh; /* modern fix */
+  padding-bottom: 0;
 }
